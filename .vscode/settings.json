@@ -1,0 +1,20 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "files.autoSave": "off",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["typescript"],
+    "files.exclude": {      
+      ".nycrc": true,
+      "**/.git": true,
+      "node_modules": true,
+      "**/.nyc_output": true,
+      "build": true,
+      "**/coverage": true,
+      "package-lock.json": true
+    }
+  }
