@@ -1,4 +1,4 @@
-import { сценарий, Контекст } from "../src";
+import { сценарий, Тест } from "../src";
 
 сценарий("сложение")
   .дано(ПервыйАргументРавен, 1)
@@ -13,27 +13,27 @@ import { сценарий, Контекст } from "../src";
   .когда(Перемножаю)
   .тогда(РезультатРавен, 6);
 
-function ПервыйАргументРавен(this: Контекст, a: number): void {
+function ПервыйАргументРавен(this: Тест, a: number): void {
   this.задаю(a, "ПервыйАргумент");
 }
 
-function ВторойАргументРавен(this: Контекст, a: number): void {
+function ВторойАргументРавен(this: Тест, a: number): void {
   this.задаю(a, "ВторойАргумент");
 }
 
-function Складываю(this: Контекст): void {
+function Складываю(this: Тест): void {
   const a = this.беруЧисло("ПервыйАргумент");
   const b = this.беруЧисло("ВторойАргумент");
   this.задаю(a + b, "Результат");
 }
 
-function Перемножаю(this: Контекст): void {
+function Перемножаю(this: Тест): void {
   const a = this.беруЧисло("ПервыйАргумент");
   const b = this.беруЧисло("ВторойАргумент");
   this.задаю(a * b, "Результат");
 }
 
-function РезультатРавен(this: Контекст, a: number): void {
+function РезультатРавен(this: Тест, a: number): void {
   const b = this.беруЧисло("ПервыйАргумент");
   this.ожидаю(b).равно(a);
 }
