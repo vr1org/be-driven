@@ -16,7 +16,7 @@ export function then<TP extends any[], TF extends (...a: TP) => void>(text: stri
 }
 
 export function scenario(name: string): Scenario {
-    
+
 }
 
 export const сценарий = scenario;
