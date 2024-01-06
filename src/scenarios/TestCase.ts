@@ -1,4 +1,4 @@
-import { Scenario } from "../Scenario";
+import { Scenario } from "../types/Scenario";
 import { TestStep, TestStepType } from "./TestStep";
 
 export class TestCase implements Scenario {

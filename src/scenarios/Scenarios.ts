@@ -1,4 +1,4 @@
-import { Scenario } from "../Scenario";
+import { Scenario } from "../types/Scenario";
 import { TestCase } from "./TestCase";
 
 export class Scenarios {

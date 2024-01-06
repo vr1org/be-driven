@@ -1,4 +1,4 @@
-import { Expect } from "./Expect";
+import { Expect } from "../Expect";
 
 export type Test<TData extends {} = {}> = {
   store<T>(val: T, ...path: string[]): void;

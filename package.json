@@ -12,6 +12,7 @@
   "dependencies": {
     "@b08/spawn": "^3.0.6",
     "fs-extra": "^11.1.1",
+    "globby": "^14.0.0",
     "semver": "^7.5.3"
   },
   "devDependencies": {

@@ -1,3 +1,3 @@
 export * from "./intro";
-export * from "./Scenario";
-export * from "./Test";
+export * from "./types/Scenario";
+export * from "./types/Test";

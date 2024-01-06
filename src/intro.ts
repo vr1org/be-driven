@@ -1,4 +1,4 @@
-import { Scenario } from "./Scenario";
+import { Scenario } from "./types/Scenario";
 import { scenarios } from "./scenarios/Scenarios";
 
 export function given<TP extends any[], TF extends (...a: TP) => void>(func: TF, ...args: TP): Scenario {

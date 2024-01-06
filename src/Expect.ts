@@ -1,16 +1,16 @@
 
 export interface Expect<T> {
   equal(val: any): void;
-  strictEqual(val: T): void;
+  deepEqual<T>(value1: T, value2: T, customText?: string): void;
+  exception(code: () => void | Promise<void>, customText?: string): void | Promise<void>;
   unequal(val: any): void;
-  strictUnequal(val: T): void;
   true(): void;
   false(): void;
 
   равно(val: any): void;
-  строгоРавно(val: T): void;
+  полностьюРавно(val: T): void;
   неРавно(val: any): void;
-  строгоНеРавно(val: T): void;
   правда(): void;
   ложь(): void;
+  исключение(code: () => void | Promise<void>, customText?: string): void | Promise<void>;
 }
