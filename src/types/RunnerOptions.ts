@@ -11,8 +11,8 @@ export type ReporterOption = Reporter | IReporter;
 
 export interface RunnerOptions {
   files?: string | string[];
-  timeout?: number;
+  globalTimeout?: number;
+  stepTimeout?: number;
   threads?: number;
-  testTimeout?: number;
   reporter?: ReporterOption | ReporterOption[];
 }

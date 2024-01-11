@@ -8,7 +8,7 @@ const defaultOptions: RunnerOptions = {
   files: ["./**/*.spec.js", "!./node_modules/**/*"],
   reporter: ["verbose", "summary"],
   testTimeout: 2000,
-  timeout: 30000
+  testRunTimeout: 30000
 };
 
 export async function runTests(options: RunnerOptions = {}): Promise<TestRunResult> {
