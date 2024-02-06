@@ -1,3 +1,6 @@
-import { TestCase } from "../../scenarios/TestCase";
+import { RunnerOptions, TestInfo, TestResult } from "../../types";
 
-export async function runScenario(testcase: TestCase): Promise<TestResult>;
+export async function runScenario(testcase: TestInfo, options: RunnerOptions): Promise<TestResult>{
+  var testContext = new TestContext();
+
+}

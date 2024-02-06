@@ -5,10 +5,10 @@ import { RunnerOptions, TestRunResult } from "./types";
 import * as os from "os";
 
 const defaultOptions: RunnerOptions = {
-  files: ["./**/*.spec.js", "!./node_modules/**/*"],
+  files: ["./**/*.bdd.js", "!./node_modules/**/*"],
   reporter: ["verbose", "summary"],
-  testTimeout: 2000,
-  testRunTimeout: 30000
+  stepTimeout: 1000,
+  globalTimeout: 30000
 };
 
 export async function runTests(options: RunnerOptions = {}): Promise<TestRunResult> {
