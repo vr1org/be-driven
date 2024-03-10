@@ -1,40 +1,50 @@
 import { Expect } from "../../Expect";
 
 export class Expecter<T = any> implements Expect<T> {
-  public equal(val: any): void {
+
+  constructor(private value) {
+    
+    
+  }
+  public equal(expected: any): void {
+    if()
+  }
+
+  public deepEqual<T>(expected: T, customText?: string): void {
     throw new Error("Method not implemented.");
   }
 
-  public deepEqual<T>(val: T, customText?: string): void {
-    throw new Error("Method not implemented.");
+  public async exception(code: () => void | Promise<void>, customText?: string): Promise<void> {
+    try {
+      await code();
+    } catch(ex: Error) {
+      return;
+    }
+
   }
 
-  public exception(code: () => void | Promise<void>, customText?: string): void | Promise<void> {
-    throw new Error("Method not implemented.");
-  }
-
-  public unequal(val: any): void {
+  public unequal(expected: any): void {
     throw new Error("Method not implemented.");
   }
 
   public true(): void {
-    throw new Error("Method not implemented.");
+    this.equal(true);
   }
 
   public false(): void {
-    throw new Error("Method not implemented.");
+    this.equal(false);
   }
 
-  public равно(val: any): void {
-    this.equal(val);
+  public равно(expected: any): void {
+    this.equal(expected);
   }
 
-  public полностьюРавно(val: T): void {
-    this.deepEqual(val);
+  public полностьюРавно(expected: T): void {
+    this.deepEqual(expected);
   }
 
-  public неРавно(val: any): void {
-    this.unequal(val);
+  public неРавно(expected: any): void {
+    this.unequal(expected);
   }
 
   public правда(): void {

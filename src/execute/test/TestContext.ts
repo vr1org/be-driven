@@ -1,8 +1,10 @@
 import { Expect } from "../../Expect";
-import { Test } from "../../types";
+import { StepResult, Test } from "../../types";
 
 export class TestContext implements Test {
   private storage: Record<string, any> = {};
+ 
+  public currentStep: StepResult;  
 
   public store<T>(val: T, ...path: string[]): void {
     var s = this.storage;

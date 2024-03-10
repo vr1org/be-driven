@@ -9,8 +9,12 @@ export interface TestResult {
 
 export interface StepResult {
   step: TestStep;
-  passed: boolean;
+  status: StepResultStatus;
   assertions: Assertion[];
 }
 
-
+export enum StepResultStatus {
+  passed = "passed",
+  failed = "failed",
+  notExecuted = "notExecuted"
+}
